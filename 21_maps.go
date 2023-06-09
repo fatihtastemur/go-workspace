@@ -39,4 +39,12 @@ func main() {
 	// add item to map
 	states["ANT"] = "Antalya"
 	fmt.Println(states)
+
+	keys := make([]string, len(states))
+	i := 0
+	for k := range states {
+		keys[i] = k
+		i++
+	}
+	fmt.Println(keys)
 }
