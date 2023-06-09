@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type Rectangle struct {
+type OneRectangle struct {
 	x float64
 	y float64
 }
@@ -13,11 +13,11 @@ type car struct {
 	year  int
 }
 
-func (r Rectangle) area() float64 {
+func (r OneRectangle) area() float64 {
 	return r.x * r.y
 }
 
-func (r Rectangle) perimeter() float64 {
+func (r OneRectangle) perimeter() float64 {
 	return 2 * (r.x + r.y)
 }
 
@@ -26,7 +26,7 @@ func (c car) presentation() {
 }
 
 func main() {
-	r := Rectangle{4, 8}
+	r := OneRectangle{4, 8}
 	fmt.Println("Area : ", r.area())
 	fmt.Println("Perimeter :", r.perimeter())
 
