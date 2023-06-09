@@ -19,4 +19,7 @@ func main() {
 	// Array Definition 2
 	teamNicknames := [6]string{"UNITED", "REDS", "CITY", "BLUES", "GUNNERS", "SPURS"}
 	fmt.Println(teamNicknames)
+
+	unKnownSize := [...]int{99, 7, 10}
+	fmt.Println(len(unKnownSize))
 }
