@@ -22,4 +22,5 @@ func main() {
 
 	unKnownSize := [...]int{99, 7, 10}
 	fmt.Println(len(unKnownSize))
+	fmt.Println(cap(unKnownSize))
 }
