@@ -16,7 +16,6 @@ func main() {
 	fmt.Println(colors)
 	fmt.Println(colors["red"])
 
-	// add map
 	var mySquad = map[string]squad{
 		"ace":     squad{"Muslera", "Nelsson", "Torreira", "Icardi"},
 		"reserve": squad{"Jankat", "Ross", "Midtsjo", "Gomis"},
@@ -26,11 +25,18 @@ func main() {
 	fmt.Println(mySquad["reserve"])
 	fmt.Println(mySquad)
 
-	// remove map
-	order := make(map[string]int)
-	order["no"] = 25
-	fmt.Println(order["no"])
-	delete(order, "no")
-	fmt.Println(order["no"])
-	fmt.Println(order)
+	// remove item from map
+	states := make(map[string]string)
+	states["IST"] = "İstanbul"
+	states["ANK"] = "Ankara"
+	states["IZM"] = "İzmir"
+
+	fmt.Println(states)
+	fmt.Println(states["ANK"])
+	delete(states, "IZM")
+	fmt.Println(states)
+
+	// add item to map
+	states["ANT"] = "Antalya"
+	fmt.Println(states)
 }
