@@ -7,14 +7,13 @@ type squad struct {
 }
 
 func main() {
-
+	// Definition
 	var colors map[string]string
 	colors = make(map[string]string)
 	colors["red"] = "#FF0000"
 	colors["green"] = "#00FF00"
 	colors["blue"] = "#0000FF"
 	fmt.Println(colors)
-
 	fmt.Println(colors["red"])
 
 	// add map
