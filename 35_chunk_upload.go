@@ -10,7 +10,6 @@ import (
 )
 
 func main() {
-
 	source := "/Users/fatihtastemur/GolandProjects/test-image.png"
 	destination := "/Users/fatihtastemur/GolandProjects/go-workspace/tmp/test-image.png"
 
@@ -25,6 +24,7 @@ func partialUpload(source, destination string) {
 	}
 
 	// Chunk Size : 20 MB
+	// 20971520
 	chunkSize := int64(20 << 20)
 	buffer := make([]byte, chunkSize)
 
@@ -70,4 +70,6 @@ func partialUpload(source, destination string) {
 		index++
 		fmt.Println("Read Bytes:", bytesRead, "Seeker:", seeker, "Index:", index)
 	}
+
+	// _ = os.Remove(source)
 }
