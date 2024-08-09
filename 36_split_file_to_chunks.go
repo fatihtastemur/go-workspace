@@ -2,9 +2,6 @@ package main
 
 import (
 	"fmt"
-	_ "image/gif"
-	_ "image/jpeg"
-	_ "image/png"
 	"io"
 	"os"
 	"strconv"
@@ -15,7 +12,8 @@ func main() {
 	source := "/Users/fatihtastemur/GolandProjects/test-image.png"
 
 	destination := "/Users/fatihtastemur/GolandProjects/go-workspace/tmp/"
-	chunkDestination := destination + strconv.Itoa(int(time.Now().Unix())) + "/"
+
+	chunkDestination := fmt.Sprintf("%s%s/", destination, strconv.Itoa(int(time.Now().Unix())))
 	_ = os.Mkdir(chunkDestination, os.ModePerm)
 
 	sourceFile, errorOpen := os.Open(source)
